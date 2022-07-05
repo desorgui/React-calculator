@@ -24,6 +24,11 @@ ul {
   padding: 15px 0;
   text-align: center;
   background-color: rgb(224, 207, 185);
+  cursor: pointer;
+}
+
+.gridItem:hover:not(:first-child) {
+  border: solid 3px #333;
 }
 
 .gridItem.result {
