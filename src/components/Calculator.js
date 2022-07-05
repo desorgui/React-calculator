@@ -1,7 +1,7 @@
 import React from 'react';
 import './calculator.css';
 
-const Calculator = () => {
+const Calculator = function() {
   return (
     <div className="calculatorContainer">
       <div className="gridContainer">
@@ -30,6 +30,6 @@ const Calculator = () => {
       </div>
     </div>
   );
-}
+};
 
 export default Calculator;
