@@ -34,7 +34,7 @@ class App extends PureComponent {
     const { show } = this.state;
     return (
       <div className="calculatorGrid">
-      <Calculator handler={this.handler} showContent={show ? show : '0'} />
+        <Calculator handler={this.handler} showContent={show} />
       </div>
     );
   }
