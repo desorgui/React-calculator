@@ -1,11 +1,3 @@
-li {
-  list-style: none;
-}
-
-ul {
-  padding: 0;
-}
-
 .calculatorContainer {
   margin: 10%;
 }
@@ -46,4 +38,9 @@ ul {
 
 .gridItem.sign {
   background-color: rgb(216, 149, 4);
+}
+
+input.gridItem {
+  border: none;
+  outline: none;
 }
