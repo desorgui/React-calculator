@@ -1,37 +1,37 @@
 import React, { PureComponent } from 'react';
 import './calculator.css';
+import PropTypes from 'prop-types';
 
 class Calculator extends PureComponent {
+  constructor(props) {
+    super(props);
+    this.state = {
+      data: ['0', 'AC', '+/-', '%', '÷', 7, 8, 9, 'x', 4, 5, 6, '-', 1, 2, 3, '+', 0, '.', '='],
+    };
+  }
+
   render() {
-    return (
-      <div className="calculatorContainer">
-        <div className="gridContainer">
-          <ul className="calculatorGrid">
-            <li className="gridItem result">0</li>
-            <li className="gridItem">AC</li>
-            <li className="gridItem">+/-</li>
-            <li className="gridItem">%</li>
-            <li className="gridItem sign">/</li>
-            <li className="gridItem">7</li>
-            <li className="gridItem">8</li>
-            <li className="gridItem">9</li>
-            <li className="gridItem sign">X</li>
-            <li className="gridItem">4</li>
-            <li className="gridItem">5</li>
-            <li className="gridItem">6</li>
-            <li className="gridItem sign">-</li>
-            <li className="gridItem">1</li>
-            <li className="gridItem">2</li>
-            <li className="gridItem">3</li>
-            <li className="gridItem sign">+</li>
-            <li className="gridItem button0">0</li>
-            <li className="gridItem">.</li>
-            <li className="gridItem sign">=</li>
-          </ul>
-        </div>
-      </div>
-    );
+    const buttonType = 'button';
+    const { data } = this.state;
+    const { showContent, handler } = this.props;
+    return data.map((value, index) => {
+      if (index === 0) {
+        return <input type={buttonType} readOnly key={`item${index + 1}`} className="gridItem result" value={showContent} />;
+      }
+      if (value === '÷' || value === '+' || value === 'x' || value === '-' || value === '=') {
+        return <input type={buttonType} onClick={handler} key={`button${index + 1}`} className="gridItem sign" value={value} />;
+      }
+      if (value === 0) {
+        return <input type={buttonType} onClick={handler} key={`button${index + 1}`} className="gridItem button0" value={value} />;
+      }
+      return <input type={buttonType} onClick={handler} key={`button${index + 1}`} className="gridItem" value={value} />;
+    });
   }
 }
+
+Calculator.propTypes = {
+  showContent: PropTypes.string.isRequired,
+  handler: PropTypes.func.isRequired,
+};
 
 export default Calculator;
