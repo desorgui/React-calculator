@@ -1,20 +1,21 @@
-import React, { PureComponent } from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import Calculator from './components/Calculator';
 import calculate from './components/calculate';
 
-class App extends PureComponent {
-  constructor(props) {
-    super(props);
-    this.state = {
-      prevData: {},
-      show: '0',
-    };
-  }
+const App = () => {
+  const [data, setData] = useState({ prevData: {}, display: '0' });
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     prevData: {},
+  //     show: '0',
+  //   };
+  // }
 
-  handler = (event) => {
+  const handler = (event) => {
     const buttonValue = event.target.value;
-    const { prevData } = this.state;
+    const { prevData } = data;
     const newData = calculate(prevData, buttonValue);
     const { total, next, operation } = newData;
     let btnpress = '';
@@ -27,17 +28,16 @@ class App extends PureComponent {
     if (next) {
       btnpress += ' '.concat(next);
     }
-    this.setState({ prevData: newData, show: btnpress });
+    setData({ prevData: newData, show: btnpress });
   }
 
-  render() {
-    const { show } = this.state;
-    return (
-      <div className="calculatorGrid">
-        <Calculator handler={this.handler} showContent={show} />
-      </div>
-    );
-  }
-}
+  const { show } = data;
+
+  return (
+    <div className="calculatorGrid">
+      <Calculator handler={handler} showContent={ show ? show: '0' } />
+    </div>
+  );
+};
 
 export default App;
