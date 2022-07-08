@@ -4,7 +4,7 @@ import Calculator from './components/Calculator';
 import calculate from './components/calculate';
 
 const App = () => {
-  const [data, setData] = useState({ prevData: {}, display: '0' });
+  const [data, setData] = useState({ prevData: {}, show: '0' });
   // constructor(props) {
   //   super(props);
   //   this.state = {
@@ -28,14 +28,16 @@ const App = () => {
     if (next) {
       btnpress += ' '.concat(next);
     }
-    setData({ prevData: newData, show: btnpress });
-  }
+    let show = '0';
+    show = btnpress;
+    setData({ prevData: newData, show });
+  };
 
   const { show } = data;
 
   return (
     <div className="calculatorGrid">
-      <Calculator handler={handler} showContent={ show ? show: '0' } />
+      <Calculator handler={handler} showContent={show} />
     </div>
   );
 };

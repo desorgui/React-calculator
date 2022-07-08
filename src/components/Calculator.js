@@ -18,7 +18,7 @@ const Calculator = (props) => {
     }
     return <input type={buttonType} onClick={handler} key={`button${index + 1}`} className="gridItem" value={value} />;
   });
-}
+};
 
 Calculator.propTypes = {
   showContent: PropTypes.string.isRequired,
