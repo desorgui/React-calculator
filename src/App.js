@@ -5,13 +5,6 @@ import calculate from './components/calculate';
 
 const App = () => {
   const [data, setData] = useState({ prevData: {}, show: '0' });
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     prevData: {},
-  //     show: '0',
-  //   };
-  // }
 
   const handler = (event) => {
     const buttonValue = event.target.value;
