@@ -2,7 +2,6 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
-
   const links = [
     {
       id: 1,
@@ -24,14 +23,12 @@ const Navbar = () => {
   return (
     <nav className="navBar">
       <h2>Maths Magician</h2>
-      <ul className='showMenu'>
+      <ul className="showMenu">
         {links.map((link) => (
           <li key={link.id}>
             <NavLink
               to={link.path}
               className={(isActive) => `nav-link${!isActive ? ' unselected' : ''}`}
-              onClick={() => closeMenu()}
-              exact
             >
               {link.text}
             </NavLink>

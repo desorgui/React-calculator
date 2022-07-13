@@ -4,8 +4,10 @@ const Home = () => (
   <div className="home">
     <h1>Welcome To Maths Magician Application</h1>
     <p>
-      This app allows people to do math operations more easily, you can performs arithmetic operations on numbers. 
-      It can do only addition, subtraction, multiplication and division mathematical calculations for now.
+      This app allows people to do math operations more easily,
+      you can performs arithmetic operations on numbers.
+      It can do only addition, subtraction,
+      multiplication and division mathematical calculations for now.
     </p>
 
     <p>

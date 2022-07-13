@@ -29,8 +29,8 @@ const CalculatorPage = () => {
 
   return (
     <>
-      <div className='calculatorPage'>
-        <h3>Let's do Some Math!</h3>
+      <div className="calculatorPage">
+        <h3>Let&apos;s do Some Math!</h3>
         <div className="calculatorGrid">
           <Calculator handler={handler} showContent={show} />
         </div>
