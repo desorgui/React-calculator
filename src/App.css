@@ -37,3 +37,38 @@
     transform: rotate(360deg);
   }
 }
+
+.showMenu {
+  display: flex;
+  min-width: 300px;
+  justify-content: flex-end;
+  padding: 0;
+}
+
+.showMenu li {
+  list-style: none;
+  margin-right: 30px;
+}
+
+.home,
+.quote {
+  padding: 0 7%;
+}
+
+.calculatorPage {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 18vh;
+  padding: 0 7%;
+}
+
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 7%;
+}
+
+.quote {
+  margin-top: 20vh;
+  text-align: center;
+}
