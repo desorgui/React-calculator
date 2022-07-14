@@ -20,12 +20,14 @@ const Navbar = () => {
     },
   ];
 
+  const role = 'linktest';
+
   return (
     <nav className="navBar">
       <h2>Maths Magician</h2>
       <ul className="showMenu">
         {links.map((link) => (
-          <li role="linktest" key={link.id}>
+          <li role={role} key={link.id}>
             <NavLink
               to={link.path}
               className={(isActive) => `nav-link${!isActive ? ' unselected' : ''}`}
