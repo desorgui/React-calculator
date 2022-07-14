@@ -25,7 +25,7 @@ const Navbar = () => {
       <h2>Maths Magician</h2>
       <ul className="showMenu">
         {links.map((link) => (
-          <li key={link.id}>
+          <li role="linktest" key={link.id}>
             <NavLink
               to={link.path}
               className={(isActive) => `nav-link${!isActive ? ' unselected' : ''}`}
