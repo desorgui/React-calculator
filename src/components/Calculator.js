@@ -8,15 +8,15 @@ const Calculator = (props) => {
   const { showContent, handler } = props;
   return data.map((value, index) => {
     if (index === 0) {
-      return <input type={buttonType} readOnly key={`item${index + 1}`} className="gridItem result" value={showContent} />;
+      return <input type={buttonType} role="result-show" readOnly key={`item${index + 1}`} className="gridItem result" value={showContent} />;
     }
     if (value === '÷' || value === '+' || value === 'x' || value === '-' || value === '=') {
-      return <input type={buttonType} onClick={handler} key={`button${index + 1}`} className="gridItem sign" value={value} />;
+      return <button type={buttonType} onClick={handler} key={`button${index + 1}`} className="gridItem sign" >{value}</button>;
     }
     if (value === 0) {
-      return <input type={buttonType} onClick={handler} key={`button${index + 1}`} className="gridItem button0" value={value} />;
+      return <button type={buttonType} onClick={handler} key={`button${index + 1}`} className="gridItem button0" >{value}</button>;
     }
-    return <input type={buttonType} onClick={handler} key={`button${index + 1}`} className="gridItem" value={value} />;
+    return <button type={buttonType} onClick={handler} key={`button${index + 1}`} className="gridItem">{value}</button>;
   });
 };
 
