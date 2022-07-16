@@ -85,3 +85,8 @@ Give a ⭐️ if you like this project!
 ## 📝 License
 
 This project is [MIT](./LICENCE.md) licensed.
+
+## Math Magician link
+- visit this application here.
+[Heroku link](https://whispering-spire-91902.herokuapp.com/calculator)
+[Netlify link](https://react-calculator-desor.netlify.app/calculator)
