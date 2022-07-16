@@ -40,6 +40,7 @@
   background-color: rgb(216, 149, 4);
 }
 
+button.gridItem,
 input.gridItem {
   border: none;
   outline: none;

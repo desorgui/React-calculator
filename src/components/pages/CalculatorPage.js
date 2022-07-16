@@ -6,19 +6,19 @@ const CalculatorPage = () => {
   const [data, setData] = useState({ prevData: {}, show: '0' });
 
   const handler = (event) => {
-    const buttonValue = event.target.value;
+    const buttonValue = event.target.textContent;
     const { prevData } = data;
     const newData = calculate(prevData, buttonValue);
     const { total, next, operation } = newData;
     let btnpress = '';
     if (total) {
-      btnpress += ' '.concat(total);
+      btnpress += ''.concat(total);
     }
     if (operation) {
-      btnpress += ' '.concat(operation);
+      btnpress += ''.concat(operation);
     }
     if (next) {
-      btnpress += ' '.concat(next);
+      btnpress += ''.concat(next);
     }
     let show = '0';
     show = btnpress;
