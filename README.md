@@ -1,4 +1,4 @@
-# First React Project
+# React Calculator
 
 > In this project I have to develop an application called Math Magician. Which is a calculator that can do many mathematical operations.
 
@@ -22,11 +22,11 @@ To get a local copy up and running follow these simple example steps.
 #### Setup
 
 Open Git Bash and run
-```git clone https://github.com/desorgui/first-react-project.git```
+```git clone https://github.com/desorgui/React-calculator.git```
 
 #### Install
 
-Run ```npm install``` in the folder **_first-react-project_**
+Run ```npm install``` in the folder **_React-calculator_**
 
 #### Preview
 
