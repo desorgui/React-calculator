@@ -1,4 +1,4 @@
-# First React Project
+# React Calculator
 
 > In this project I have to develop an application called Math Magician. Which is a calculator that can do many mathematical operations.
 
