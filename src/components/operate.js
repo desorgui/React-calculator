@@ -12,6 +12,17 @@ export default function operate(numberOne, numberTwo, operation) {
   if (operation === 'x') {
     return one.times(two).toString();
   }
+  // if (operation === '√') {
+  //   return one.sqrt().toString();
+  // }
+
+  // if (operation === 'pow') {
+  //   try {
+  //     return one.pow(two).toString();
+  //   } catch (err) {
+  //     return "Cant find pow";
+  //   }
+  // }
   if (operation === '÷') {
     try {
       return one.div(two).toString();
@@ -19,7 +30,7 @@ export default function operate(numberOne, numberTwo, operation) {
       return "Can't divide by 0.";
     }
   }
-  if (operation === '%') {
+  if (operation === 'mod') {
     try {
       return one.mod(two).toString();
     } catch (err) {

@@ -50,22 +50,80 @@
   margin-right: 30px;
 }
 
+.showMenu li a {
+  text-decoration: none;
+  padding: 10px 0;
+  transition: all linear .5s;
+}
+
+.showMenu li a:hover,
+li .active,
+li a:active {
+  color: rgb(216, 149, 4);
+  border-bottom: solid 2px rgb(216, 149, 4);
+}
+
 .home,
 .quote {
   padding: 0 7%;
 }
 
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.home .home-img {
+  width: 50%;
+  height: 100%;
+  background-image: url('./42222.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+
+.home .home-content {
+  width: 50%;
+  height: 100%;
+  padding: 0 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .calculatorPage {
   display: flex;
   justify-content: space-between;
-  margin-top: 18vh;
-  padding: 0 7%;
+  align-items: center;
+  height: 100vh;
+  background-image: url('./math-bg.jpg');
+  background-size: 100% 100%;
 }
 
 .navBar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(240, 248, 255, 0.555);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  
+}
+
+.navBar .container {
   display: flex;
   justify-content: space-between;
-  padding: 0 7%;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.navBar img {
+  height: 60px;
+  width: 100px;
 }
 
 .quote {

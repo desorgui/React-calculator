@@ -3,7 +3,7 @@ import './calculator.css';
 import PropTypes from 'prop-types';
 
 const Calculator = (props) => {
-  const data = ['0', 'AC', '+/-', '%', '÷', 7, 8, 9, 'x', 4, 5, 6, '-', 1, 2, 3, '+', 0, '.', '='];
+  const data = ['0', 'AC', '+/-', 'mod', '÷', 7, 8, 9, 'x', 4, 5, 6, '-', 1, 2, 3, '+', 0, '.', '='];
   const buttonType = 'button';
   const role = 'result-show';
   const { showContent, handler } = props;

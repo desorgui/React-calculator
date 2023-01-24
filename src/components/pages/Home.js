@@ -2,6 +2,8 @@ import React from 'react';
 
 const Home = () => (
   <div className="home">
+    <div className='home-img' />
+    <div className='home-content'>
     <h1>Welcome To Maths Magician Application</h1>
     <p>
       This app allows people to do math operations more easily,
@@ -15,6 +17,7 @@ const Home = () => (
       He is opened to freelance Gig. So go ahead and connect with Guishny on
       Twitter @DGuishny
     </p>
+    </div>
   </div>
 );
 

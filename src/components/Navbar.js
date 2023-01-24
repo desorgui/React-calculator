@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import logo from './logo.png';
 
 const Navbar = () => {
   const links = [
@@ -24,19 +25,20 @@ const Navbar = () => {
 
   return (
     <nav className="navBar">
-      <h2>Maths Magician</h2>
+      <div className="container">
+      <img src={logo} alt='logo' />
       <ul className="showMenu">
         {links.map((link) => (
           <li role={role} key={link.id}>
             <NavLink
               to={link.path}
-              className={(isActive) => `nav-link${!isActive ? ' unselected' : ''}`}
             >
               {link.text}
             </NavLink>
           </li>
         ))}
       </ul>
+      </div>
     </nav>
   );
 };
