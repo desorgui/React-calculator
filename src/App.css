@@ -100,7 +100,7 @@ li a:active {
   align-items: center;
   height: 100vh;
   background-image: url('./math-bg.jpg');
-  background-size: 100% 100%;
+  background-size: cover;
 }
 
 .navBar {
