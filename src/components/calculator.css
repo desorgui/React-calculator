@@ -8,20 +8,34 @@
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
   width: 100%;
   max-width: 600px;
-  gap: 1px;
-  background-color: #555;
+  gap: 1rem;
+  background-color: rgba(0, 0, 0, 0.158);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
 }
 
 .gridItem {
   padding: 15px 0;
   text-align: center;
-  background-color: rgb(224, 207, 185);
+  border-radius: 0.5em;
+  background: #e8e8e8;
+  border: 1px solid #e8e8e8;
+  transition: all .3s;
+  box-shadow: 6px 6px 12px #c5c5c5,
+              -6px -6px 12px #ffffff;
   cursor: pointer;
 }
 
-.gridItem:hover:not(:first-child) {
-  border: solid 3px #333;
+.gridItem:active {
+  color: #666;
+ box-shadow: inset 4px 4px 12px #c5c5c5,
+             inset -4px -4px 12px #ffffff;
 }
+
+/* .gridItem:hover:not(:first-child) {
+  border: solid 3px #333;
+} */
 
 .gridItem.result {
   grid-column: 1 / span 4;
@@ -37,7 +51,19 @@
 }
 
 .gridItem.sign {
-  background-color: rgb(216, 149, 4);
+  background: #333;
+  box-shadow: -5px -5px 12px #444, 5px 5px 12px #222, inset 5px 5px 7px #444, inset -5px -5px 7px #222;
+  font-family: 'Damion', cursive;
+  border: none;
+  font-size: 16px;
+  color: rgb(161, 161, 161);
+  transition: 500ms;
+}
+
+.gridItem.sign:active {
+  box-shadow: inset 5px 5px 7px #222, inset -5px -5px 7px #444;
+  color: #d6d6d6;
+  transition: 500ms;
 }
 
 button.gridItem,

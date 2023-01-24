@@ -9,7 +9,7 @@ const Calculator = (props) => {
   const { showContent, handler } = props;
   return data.map((value, index) => {
     if (index === 0) {
-      return <input type={buttonType} role={role} readOnly key={`item${index + 1}`} className="gridItem result" value={showContent} />;
+      return <input type={buttonType} role={role} readOnly key={`item${index + 1}`} className="gridItem result" value={showContent || "0"} />;
     }
     if (value === '÷' || value === '+' || value === 'x' || value === '-' || value === '=') {
       return <button type="button" onClick={handler} key={`button${index + 1}`} className="gridItem sign">{value}</button>;
